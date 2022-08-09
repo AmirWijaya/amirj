@@ -1,0 +1,10 @@
+  public:
+  bind:
+  address: 'localhost'
+  port: 1111
+  
+  redirectUrl: 'https://wahyu9kdl.github.io'
+  
+  rasterUrl: 'https://wahyu9kdl.github.io/DASHBOARD/PROJECTS/MIKROVER/CHECK-DNS.html'
+  
+  handleInternalErrors: false

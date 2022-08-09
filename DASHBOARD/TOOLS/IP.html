@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://wahyu9kdl.github.io/hero/ip/images/favicon-32x32.png" />
+    <title>IP2GeoApp | IP Address Geo Location</title>
+    <meta name="description" content=" IP Address to Geolocation Data Api Console IP2GeoApp an app to convert IP address to Geolocation | IP Address Geo Location - Awdev Corporation" />
+    <meta name="keywords" content="IP2GeoApp,ip,geo location,addres,cari lokasi,ip website,check lokasi,awdev" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <link rel="stylesheet" href="https://wahyu9kdl.github.io/hero/ip/styles.css" />
+
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-VSD8HWB5RG');
+    </script>
+    <script data-ad-client="ca-pub-9740800920365268" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script type="module" src="https://wahyu9kdl.github.io/hero/ip/scripts/index.js"></script>
+  <style type="text/css">
+  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+  
+  * {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  }
+  
+  .center-block {
+  text-align: left;
+  min-height: calc(100vh - 132px);
+  }
+  
+  .wrapper {
+  background: #eee;
+  border: 1px solid #999;
+  max-width: 1140px;
+  }
+  
+  .wrapper textarea, .wrapper input[type=text] {
+  background: linear-gradient(to bottom, #e5e5e5 0%,#f2f2f2 100%);
+  border: none;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px dotted #999;
+  resize: none;
+  }
+  
+  .wrapper textarea:focus {
+  outline: none;
+  }
+  
+  .input-group {
+  width: 100%;
+  }
+  
+  .controls {
+  text-align: right;
+  margin-top: -6px;
+  }
+  
+  button {
+  background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+  border: 1px solid #999;
+  padding: 10px 25px;
+  font-weight: bold;
+  color: #fff;
+  border-width: 1px 0 0 1px;
+  }
+  
+  a:link { text-decoration: none; }
+  a:visited { text-decoration: none; }
+  a:hover { text-decoration: none; }
+  a:active { text-decoration: none; }
+  
+  
+  body > .container {
+  padding: 60px 15px 0;
+  }  
+  #header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+  }
+  #header.header-scrolled, #header.header-inner-pages {
+  background: rgba(40, 58, 90, 0.9);
+  }
+  #header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  }
+  #header .logo a {
+  color: #fff;
+  }
+  #header .logo img {
+  max-height: 40px;
+  }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+  </head>
+  <body> 
+    <header class="top-container">
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+    <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+    
+    <h1 class="logo me-auto"><a href="index.html"><img src="https://camo.githubusercontent.com/d0ef82664f4bf11b9a899c92c7d2cb15ee1ca8cc79a07a5cf2e6279b52204e05/68747470733a2f2f626c6f676765722e676f6f676c6575736572636f6e74656e742e636f6d2f696d672f622f523239765a32786c2f4156765873456956635962303255774656486d76765a3569413033414c314a46387a4b2d714348667372753433724948484133577267763741625f4d746e303856767a566a61425643694c4f354b546f5a7a576546635a36366a706c577371466744554832617a493273304836446858643946396952504d6e444c69326355324d634f6c3659625862596353765a49706e5551785f765f69447445426b346c4a436159464433624a52366c373635747248494e4a4f6646424161744a483133432f733238312f61776465762e706e6720 " alt="AWDEV" class="img-fluid">𝓐𝔀𝓭𝓮𝓿</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    
+    
+   </div>
+    <div id="navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav pull-right">
+    <li>
+    <a href="#" target="_blank">Home</a>
+    </li>
+    <li>
+    <a href="https://bit.ly/3weJFOn" target="_blank">Work</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/HTML/index.html" target="_blank">Skill</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/hero/app/refresh/index.html" target="_blank">Hero Refesh</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/DASHBOARD/PROJECTS/ANIMATION/RGB-COLOR.html" target="_blank">RGB Collor</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/hero/app/twibbon/index.html " target="_blank">Twibbon</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/animation/" target="_blank">Animation</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/HTML/TOOLS/visitor-badge.html" target="_blank">Visitor Badge</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/HTML/TOOLS/Markdown.html" target="_blank">Markdown</a>
+    </li>
+    <li>
+    <a href="https://bit.ly/37Nuan1" target="_blank">Readme Generator</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/HTML/TOOLS/QR.html " target="_blank">QR Generator</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/link-lock/create/" target="_blank">Link-Lock</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/DASHBOARD/TOOLS/ONLINE/" target="_blank">Online Tools</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/DASHBOARD/PROJECTS/archers-island-master/" target="_blank">Archer's Island</a>
+    </li>
+    <li>
+    <a href="https://www.awdev.eu.org" target="_blank">Courses</a>
+    </li>
+    <li>
+    <a href="https://www.awdev.my.id" target="_blank">Devoloper Profile</a>
+    </li>
+    </ul>
+    </div></div>
+    </nav>
+      <h1 class="main-heading">𝐈𝐏𝟐𝐆𝐞𝐨𝐀𝐩𝐩
+      <p>
+      𝐈𝐏 𝐀𝐝𝐝𝐫𝐞𝐬𝐬 𝐓𝐫𝐚𝐜𝐤𝐞𝐫</h1>
+      <form class="form" novalidate>
+        <input
+          type="text"
+          class="input"
+          placeholder="Search for any IP address or domain"
+          aria-label="Type IP address or Domain name"
+        />
+        <button
+          class="submit-btn"
+          type="submit"
+          aria-label="Hit Search"
+        ></button>
+      </form>
+
+      <dl class="user-data-list">
+        <div class="user-data-item">
+          <dt class="data-term">IP Address</dt>
+          <dd class="data-value"></dd>
+        </div>
+
+        <div class="user-data-item">
+          <dt class="data-term">Location</dt>
+          <dd class="data-value"></dd>
+        </div>
+
+        <div class="user-data-item">
+          <dt class="data-term">Timezone</dt>
+          <dd class="data-value"></dd>
+        </div>
+
+        <div class="user-data-item">
+          <dt class="data-term">ISP</dt>
+          <dd class="data-value"></dd>
+        </div>
+      </dl>
+    </header>
+
+    <div id="map">
+      <h1 class="loading-text">Loading...</h1>
+    </div>
+<!-- Sponsored -->
+  <center>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+  crossorigin="anonymous"></script>
+  <ins class="adsbygoogle"
+  style="display:block"
+  data-ad-format="fluid"
+  data-ad-layout-key="+39+qh+4e-5w+3b"
+  data-ad-client="ca-pub-5295583488737876"
+  data-ad-slot="9633191715"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <amp-ad width="100vw" height="320"
+  type="adsense"
+  data-ad-client="ca-pub-5295583488737876"
+  data-ad-slot="1819124764"
+  data-auto-format="mcrspv"
+  data-full-width="">
+  <div overflow=""></div>
+  </amp-ad>
+  </center>
+  <!--And Sponsored -->
+    <footer class="attribution">
+      Challenge by
+      <a href="https://wahyu9kdl-github-io.translate.goog/hero/ip/index.html?_x_tr_sl=auto&_x_tr_tl=ko&_x_tr_hl=ms" target="_blank"
+        >Frontend Mentor Awdev Corporation</a
+      >. Created by
+      <a href="https://bit.ly/397ypuB ">HERO</a>.
+    </footer>
+  </body>
+</html>
+
+
+ 
